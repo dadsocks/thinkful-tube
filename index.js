@@ -13,7 +13,9 @@ function getDataFromYouTube(criteria, callback) {
 function renderResults(result) {
 	return `
 	<div class="result">
-		<img src="${result.snippet.thumbnails.medium.url}">
+		<a href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank">
+			<img src="${result.snippet.thumbnails.medium.url}">
+		</a>
 	</div>`
 }
 
