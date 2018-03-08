@@ -21,6 +21,7 @@ function renderResults(result) {
 
 function youTubeSearchData(data) {
 	const results = data.items.map((item,index) => renderResults(item));
+	$(".search-results").prop('hidden',false);
 	$(".search-results").html(results);
 }
 
@@ -36,7 +37,7 @@ function searchSubmit() {
 
 function renderLightBox(vidID) {
 	return `
-	<div class="lightbox">
+	<div class="lightbox" aria-live='assertive'>
 		<p>CLick Anywhere to Close</p>
     	<div class="content">
         	<iframe src="${vidID}"  width="641" height="360" frameborder="0" allow="autoplay; encrypted-media"></iframe>
@@ -63,11 +64,7 @@ function lightBoxDisplay() {
 
 
 
+
+
 $(lightBoxDisplay);
 $(searchSubmit);
-
-
-
-
-
-

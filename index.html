@@ -7,18 +7,18 @@
     <link href="main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<header>
+	<header role="banner">
 		<h1>Search for Some Vidz</h1>
 	</header>
-	<main>
-		<form class="search-form">
+	<main role="main">
+		<form action="#" class="search-form">
 			<label for="query"></label>
 			<input type="text" name="youTubeSearch" id="query" class="search-query">
 			<button type="submit">Search</button>
 		</form>
 		<h2>Here is yo' vidz...</h2>
-		<div class="search-results">
-			
+		<div class="search-results" aria-live="assertive" hidden>
+
 		</div>
 	</main>
 </body>
